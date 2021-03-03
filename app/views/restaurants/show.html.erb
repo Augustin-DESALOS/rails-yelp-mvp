@@ -9,4 +9,5 @@
 <% @restaurant.reviews.each do |r| %>
   <%= r.content %>
   <%= "*" * r.rating %>
+  <%= link_to  "Delete", restaurant_review_path(@restaurant, r), method: "delete" %>
 <% end %>
